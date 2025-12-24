@@ -1,0 +1,48 @@
+TRACK B EVALUATION SUMMARY (Heuristic + Logged Metrics)
+Input file: trackB_results.jsonl
+
+=== Overall ===
+Total runs: 24
+Latency ms overall: mean=21315, median=10830, min=1259, max=94825
+
+=== By System ===
+System: baseline_agent_no_critic
+Runs: 8
+Refusal rate: 25.00%
+Correct refusal proxy rate: 0.00%
+Over-refusal proxy rate: 25.00%
+Grounded proxy rate (doc-mode + non-empty context + not refusal): 25.00%
+Risky hallucination proxy rate (numbers w/ empty context + not refusal): 0.00%
+Routing accuracy (doc/web only): 100.00% (6/6)
+Latency ms: mean=10829, median=10402, min=3480, max=17134
+
+System: baseline_standard_rag
+Runs: 8
+Refusal rate: 50.00%
+Correct refusal proxy rate: 12.50%
+Over-refusal proxy rate: 37.50%
+Grounded proxy rate (doc-mode + non-empty context + not refusal): 12.50%
+Risky hallucination proxy rate (numbers w/ empty context + not refusal): 0.00%
+Routing accuracy (doc/web only): 100.00% (6/6)
+Latency ms: mean=4360, median=3117, min=1259, max=9383
+
+System: proposed_full_system
+Runs: 8
+Refusal rate: 0.00%
+Correct refusal proxy rate: 0.00%
+Over-refusal proxy rate: 0.00%
+Grounded proxy rate (doc-mode + non-empty context + not refusal): 50.00%
+Risky hallucination proxy rate (numbers w/ empty context + not refusal): 0.00%
+Routing accuracy (doc/web only): 100.00% (6/6)
+Latency ms: mean=48757, median=38118, min=30889, max=94825
+
+=== By Query Type & System ===
+adv | baseline_agent_no_critic | runs=2 | refusal=0.00% | correct_refusal=0.00% | over_refusal=0.00% | grounded=0.00% | risky=0.00% | latency_mean=14675ms
+adv | baseline_standard_rag | runs=2 | refusal=50.00% | correct_refusal=50.00% | over_refusal=0.00% | grounded=0.00% | risky=0.00% | latency_mean=1337ms
+adv | proposed_full_system | runs=2 | refusal=0.00% | correct_refusal=0.00% | over_refusal=0.00% | grounded=0.00% | risky=0.00% | latency_mean=31828ms
+doc | baseline_agent_no_critic | runs=4 | refusal=50.00% | correct_refusal=0.00% | over_refusal=50.00% | grounded=50.00% | risky=0.00% | latency_mean=6324ms
+doc | baseline_standard_rag | runs=4 | refusal=75.00% | correct_refusal=0.00% | over_refusal=75.00% | grounded=25.00% | risky=0.00% | latency_mean=7344ms
+doc | proposed_full_system | runs=4 | refusal=0.00% | correct_refusal=0.00% | over_refusal=0.00% | grounded=100.00% | risky=0.00% | latency_mean=65432ms
+web | baseline_agent_no_critic | runs=2 | refusal=0.00% | correct_refusal=0.00% | over_refusal=0.00% | grounded=0.00% | risky=0.00% | latency_mean=15991ms
+web | baseline_standard_rag | runs=2 | refusal=0.00% | correct_refusal=0.00% | over_refusal=0.00% | grounded=0.00% | risky=0.00% | latency_mean=1416ms
+web | proposed_full_system | runs=2 | refusal=0.00% | correct_refusal=0.00% | over_refusal=0.00% | grounded=0.00% | risky=0.00% | latency_mean=32336ms
