@@ -1,15 +1,35 @@
-langgraph
-langchain
-langchain-groq
-langchain-community
-langchain-huggingface
-langchain-pinecone
-pinecone-client
-tavily-python
-python-dotenv
-chainlit
-pandas
-pypdf
-sqlalchemy
-aiosqlite
-sentence-transformers
+# Core LLM + Agent Frameworks
+langchain>=0.1.16
+langgraph>=0.0.40
+langchain-core>=0.1.45
+
+# LLM Provider
+langchain-groq>=0.1.2
+
+# Retrieval & Embeddings
+langchain-pinecone>=0.1.0
+pinecone-client>=3.0.0
+sentence-transformers>=2.2.2
+langchain-huggingface>=0.0.6
+
+# Web Search Tool
+tavily-python>=0.3.3
+
+# UI Framework
+chainlit>=1.1.300
+
+# Data Handling & Evaluation
+pandas>=2.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+
+# Environment & Utilities
+python-dotenv>=1.0.0
+typing-extensions>=4.7.0
+
+# Database
+sqlalchemy>=2.0.0
+
+# Parsing & Helpers
+jsonlines>=4.0.0
+tqdm>=4.66.0
